@@ -1,7 +1,7 @@
 /**
  * Log data to flash storage
  */
-//% block="Data Logger"
+//% block="Datalogger"
 //% icon="\uf0ce"
 //% color="#378273"
 namespace datalogger {
