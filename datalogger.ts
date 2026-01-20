@@ -70,7 +70,7 @@ namespace datalogger {
         return new ColumnValue(column, value);
     }
 
-    //% block="$column"
+    //% block="$kolonne"
     //% blockId=datalogger_columnfield
     //% group="micro:bit (V2)"
     //% blockHidden=true shim=TD_ID
