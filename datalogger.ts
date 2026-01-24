@@ -118,8 +118,13 @@ namespace datalogger {
      * @param data8 [optional] eighth column and value to be logged
      * @param data9 [optional] ninth column and value to be logged
      * @param data10 [optional] tenth column and value to be logged
+     * @param data11 [optional] elleventh column and value to be logged
+     * @param data12 [optional] twelth column and value to be logged
+     * @param data13 [optional] thirtenth column and value to be logged
+     * @param data14 [optional] fourtenth column and value to be logged
+     * @param data15 [optional] fiftenth column and value to be logged
      */
-    //% block="logg data $data1||$data2 $data3 $data4 $data5 $data6 $data7 $data8 $data9 $data10"
+    //% block="logg data $data1||$data2 $data3 $data4 $data5 $data6 $data7 $data8 $data9 $data10 $data11 $data12 $data13 $data14 $data15"
     //% blockId=dataloggerlog
     //% data1.shadow=dataloggercreatecolumnvalue
     //% data2.shadow=dataloggercreatecolumnvalue
@@ -131,6 +136,11 @@ namespace datalogger {
     //% data8.shadow=dataloggercreatecolumnvalue
     //% data9.shadow=dataloggercreatecolumnvalue
     //% data10.shadow=dataloggercreatecolumnvalue
+    //% data11.shadow=dataloggercreatecolumnvalue
+    //% data12.shadow=dataloggercreatecolumnvalue
+    //% data13.shadow=dataloggercreatecolumnvalue
+    //% data14.shadow=dataloggercreatecolumnvalue
+    //% data15.shadow=dataloggercreatecolumnvalue
     //% inlineInputMode="variable"
     //% inlineInputModeLimit=1
     //% group="micro:bit (V2)"
@@ -145,7 +155,12 @@ namespace datalogger {
         data7?: datalogger.ColumnValue,
         data8?: datalogger.ColumnValue,
         data9?: datalogger.ColumnValue,
-        data10?: datalogger.ColumnValue
+        data10?: datalogger.ColumnValue,
+        data11?: datalogger.ColumnValue,
+        data12?: datalogger.ColumnValue,
+        data13?: datalogger.ColumnValue,
+        data14?: datalogger.ColumnValue,
+        data15?: datalogger.ColumnValue
     ): void {
         logData(
             [
@@ -159,6 +174,11 @@ namespace datalogger {
                 data8,
                 data9,
                 data10,
+                data11,
+                data12,
+                data13,
+                data14, 
+                data15,
             ].filter(el => !!el)
         );
     }
@@ -193,8 +213,13 @@ namespace datalogger {
      * @param col8 Title for eighth column to be added
      * @param col9 Title for ninth column to be added
      * @param col10 Title for tenth column to be added
+     * @param col11 Title for elleventh column to be added
+     * @param col12 Title for twelveth column to be added
+     * @param col13 Title for thirtenth column to be added
+     * @param col14 Title for fourtenth column to be added
+     * @param col15 Title for fiftenth column to be added
      */
-    //% block="sett kolonne $col1||$col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10"
+    //% block="sett kolonne $col1||$col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10 $col11 $col12 $col13 $col14 $col15"
     //% blockId=dataloggersetcolumntitles
     //% inlineInputMode="variable"
     //% inlineInputModeLimit=1
@@ -210,6 +235,11 @@ namespace datalogger {
     //% col8.shadow=datalogger_columnfield
     //% col9.shadow=datalogger_columnfield
     //% col10.shadow=datalogger_columnfield
+    //% col11.shadow=datalogger_columnfield
+    //% col12.shadow=datalogger_columnfield
+    //% col13.shadow=datalogger_columnfield
+    //% col14.shadow=datalogger_columnfield
+    //% col15.shadow=datalogger_columnfield
     export function setColumnTitles(
         col1: string,
         col2?: string,
@@ -220,10 +250,15 @@ namespace datalogger {
         col7?: string,
         col8?: string,
         col9?: string,
-        col10?: string
+        col10?: string,
+        col11?: string,
+        col12?: string,
+        col13?: string,
+        col14?: string,
+        col15?: string
     ): void {
         logData(
-            [col1, col2, col3, col4, col5, col6, col7, col8, col9, col10]
+            [col1, col2, col3, col4, col5, col6, col7, col8, col9, col10, col11, col12, col13, col14, col15]
                 .filter(el => !!el)
                 .map(col => createCV(col, ""))
         );
