@@ -6,9 +6,9 @@
 //% color="#378273"
 namespace datalogger {
     export enum DeleteType {
-        //% block="fast"
+        //% block="fort"
         Fast,
-        //% block="full"
+        //% block="fullt"
         Full
     }
 
