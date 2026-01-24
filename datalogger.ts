@@ -6,10 +6,10 @@
 //% color="#378273"
 namespace datalogger {
     export enum DeleteType {
-        //% block="fast"
-        Rask,
-        //% block="full"
-        Fullstendig
+        //% block="rask"
+        Fast,
+        //% block="fullstendig"
+        Full
     }
 
     let onLogFullHandler: () => void;
@@ -240,7 +240,7 @@ namespace datalogger {
     //% weight=60 help=datalogger/delete-log
     export function deleteLog(deleteType?: DeleteType): void {
         init();
-        flashlog.clear(deleteType === DeleteType.Fullstendig);
+        flashlog.clear(deleteType === DeleteType.Full);
         _disabled = false;
     }
 
