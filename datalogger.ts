@@ -123,8 +123,13 @@ namespace datalogger {
      * @param data13 [optional] thirtenth column and value to be logged
      * @param data14 [optional] fourtenth column and value to be logged
      * @param data15 [optional] fifthtenth column and value to be logged
+     * @param data16 [optional] sixtenth column and value to be logged
+     * @param data17 [optional] seventeth column and value to be logged
+     * @param data18 [optional] eightenth column and value to be logged
+     * @param data19 [optional] ninetenth column and value to be logged
+     * @param data20 [optional] twentieth column and value to be logged
      */
-    //% block="logg data $data1||$data2 $data3 $data4 $data5 $data6 $data7 $data8 $data9 $data10 $data11 $data12 $data13 $data14 $data15"
+    //% block="logg data $data1||$data2 $data3 $data4 $data5 $data6 $data7 $data8 $data9 $data10 $data11 $data12 $data13 $data14 $data15 $data16 $data17 $data18 $data19 $data20"
     //% blockId=dataloggerlog
     //% data1.shadow=dataloggercreatecolumnvalue
     //% data2.shadow=dataloggercreatecolumnvalue
@@ -141,6 +146,11 @@ namespace datalogger {
     //% data13.shadow=dataloggercreatecolumnvalue
     //% data14.shadow=dataloggercreatecolumnvalue
     //% data15.shadow=dataloggercreatecolumnvalue
+    //% data16.shadow=dataloggercreatecolumnvalue
+    //% data17.shadow=dataloggercreatecolumnvalue
+    //% data18.shadow=dataloggercreatecolumnvalue
+    //% data19.shadow=dataloggercreatecolumnvalue
+    //% data20.shadow=dataloggercreatecolumnvalue
     //% inlineInputMode="variable"
     //% inlineInputModeLimit=1
     //% group="micro:bit (V2)"
@@ -160,7 +170,12 @@ namespace datalogger {
         data12?: datalogger.ColumnValue,
         data13?: datalogger.ColumnValue,
         data14?: datalogger.ColumnValue,
-        data15?: datalogger.ColumnValue
+        data15?: datalogger.ColumnValue,
+        data16?: datalogger.ColumnValue,
+        data17?: datalogger.ColumnValue,
+        data18?: datalogger.ColumnValue,
+        data19?: datalogger.ColumnValue,
+        data20?: datalogger.ColumnValue
     ): void {
         logData(
             [
@@ -179,6 +194,11 @@ namespace datalogger {
                 data13,
                 data14,
                 data15,
+                data16,
+                data17,
+                data18,
+                data19,
+                data20,
             ].filter(el => !!el)
         );
     }
@@ -218,8 +238,13 @@ namespace datalogger {
      * @param col13 Title for thirtenth column to be added
      * @param col14 Title for fourtenth column to be added
      * @param col15 Title for fifthtenth column to be added
+     * @param col16 Title for sixtenth column to be added
+     * @param col17 Title for sevententh column to be added
+     * @param col18 Title for eighttenth column to be added
+     * @param col19 Title for ninetenth column to be added
+     * @param col20 Title for twentieth column to be added
      */
-    //% block="sett kolonner $col1||$col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10 $col11 $col12 $col13 $col14 $col15"
+    //% block="sett kolonner $col1||$col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10 $col11 $col12 $col13 $col14 $col15 $col16 $col17 $col18 $col19 $col20"
     //% blockId=dataloggersetcolumntitles
     //% inlineInputMode="variable"
     //% inlineInputModeLimit=1
@@ -240,6 +265,11 @@ namespace datalogger {
     //% col13.shadow=datalogger_columnfield
     //% col14.shadow=datalogger_columnfield
     //% col15.shadow=datalogger_columnfield
+    //% col16.shadow=datalogger_columnfield
+    //% col17.shadow=datalogger_columnfield
+    //% col18.shadow=datalogger_columnfield
+    //% col19.shadow=datalogger_columnfield
+    //% col20.shadow=datalogger_columnfield
     export function setColumnTitles(
         col1: string,
         col2?: string,
@@ -255,10 +285,15 @@ namespace datalogger {
         col12?: string,
         col13?: string,
         col14?: string,
-        col15?: string
+        col15?: string,
+        col16?: string,
+        col17?: string,
+        col18?: string,
+        col19?: string,
+        col20?: string
     ): void {
         logData(
-            [col1, col2, col3, col4, col5, col6, col7, col8, col9, col10, col11, col12, col13, col14, col15]
+            [col1, col2, col3, col4, col5, col6, col7, col8, col9, col10, col11, col12, col13, col14, col15, col16, col17, col18, col19, col20]
                 .filter(el => !!el)
                 .map(col => createCV(col, ""))
         );
