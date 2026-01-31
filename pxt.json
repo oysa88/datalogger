@@ -20,9 +20,6 @@
         "microbit"
     ],
     "preferredEditor": "tsprj",
-    "disablesVariants": [
-        "mbdal"
-    ],
     "yotta": {
         "config": {
             "MICROBIT_BLE_UTILITY_SERVICE": 1,
